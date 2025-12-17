@@ -1,0 +1,25 @@
+[project]
+name = "docgenius"
+version = "0.1.0"
+description = "AI-powered code context and Q&A CLI tool."
+authors = [
+    { name="Your Name", email="your@email.com" }
+]
+dependencies = [
+    "typer",
+    "rich",
+    "google-generativeai",
+    "psycopg2-binary",
+    "pgvector",
+    "gitpython",
+    "python-dotenv",
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools]
+packages = ["docgenius"]
+
+[project.scripts]
+docgenius = "docgenius.docgenius:app"
+

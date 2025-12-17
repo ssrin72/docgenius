@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+docgenius/__init__.py
+docgenius/db_setup.py
+docgenius/docgenius.py
+docgenius/ingest.py
+docgenius.egg-info/PKG-INFO
+docgenius.egg-info/SOURCES.txt
+docgenius.egg-info/dependency_links.txt
+docgenius.egg-info/entry_points.txt
+docgenius.egg-info/requires.txt
+docgenius.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_db.py
+tests/test_ingest.py

@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: docgenius
+Version: 0.1.0
+Summary: AI-powered code context and Q&A CLI tool.
+Author-email: Your Name <your@email.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typer
+Requires-Dist: rich
+Requires-Dist: google-generativeai
+Requires-Dist: psycopg2-binary
+Requires-Dist: pgvector
+Requires-Dist: gitpython
+Requires-Dist: python-dotenv
+
+# DocGenius
+
+AI-powered code context and Q&A CLI tool.
+
+## Installation (dev mode)
+
+```bash
+pip install -e .
+```
+
+or
+
+```bash
+python -m pip install --editable .
+```
+
+## Usage
+
+```bash
+docgenius --help
+```
+
+### Example: Ingest codebase
+
+```bash
+docgenius sync --path . --api-key <YOUR_GEMINI_API_KEY>
+```
+
+or set your API key globally:
+
+```bash
+export DOCGENIUS_API_KEY=sk-...
+docgenius sync --path .
+```
+
+### Example: Ask a question
+
+```bash
+docgenius ask "What is the main authentication flow?" --api-key <YOUR_GEMINI_API_KEY>
+```
+
+---
+
+**Note**: Ensure your dockerized Postgres/pgvector is running, and tables are initialized using:
+
+```bash
+docker-compose up -d
+python db_setup.py
+```
+
+---
+
+## Development
+Test with pytest:
+```bash
+pytest
+```
+
+---
+
+## License
+MIT
+
