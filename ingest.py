@@ -59,7 +59,7 @@ def upsert_chunks_to_db(cur, chunk_batch, metadata_batch, embedding_batch):
     assert len(chunk_batch) == len(metadata_batch) == len(embedding_batch['embeddings'])
     data = [
         (chunk, meta, embedding)
-        for chunk, meta, embedding in zip(chunk_batch, metadata_batch, embedding_batch['embeddings'])
+        for chunk, meta, embedding in zip(chunk_batch, metadata_batch, embedding_batch['embedding'])
     ]
     query = """
     INSERT INTO code_context (content, metadata, embedding)
